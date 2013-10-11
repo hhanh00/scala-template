@@ -24,7 +24,14 @@ class WebApp extends Actor with HttpService {
             println(script)
             getFromResource(script)
         }
-    }
+    } ~
+      post {
+        (path("postName") & formFields('name)) {
+          (name) =>
+            println(name)
+            complete("Submitted")
+        }
+      }
   }
 
   val scalateEngine = {
