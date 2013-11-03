@@ -9,7 +9,10 @@ object AppBuild extends Build {
     "com.typesafe.akka" %% "akka-actor" % "2.2.0",
     "com.typesafe.akka" %% "akka-slf4j" % "2.2.0",
     "ch.qos.logback" % "logback-classic" % "1.0.13",
-    "ch.qos.logback" % "logback-core" % "1.0.13"
+    "ch.qos.logback" % "logback-core" % "1.0.13",
+    "com.typesafe.akka" %% "akka-testkit" % "2.2.0" % "test",
+    "org.scalatest" %% "scalatest" % "1.9.2" % "test",
+    "junit" % "junit" % "4.11" % "test"
   )
 
   val main = Project(appName, file("."), settings = Project.defaultSettings ++ Seq(
